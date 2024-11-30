@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restablecer Contraseña</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reutilizando estilos */
+        * { padding: 0; margin: 0; box-sizing: border-box; }
+        body { background-color: #f5d0e1; font-family: 'Poppins', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .form-container { width: 450px; background-color: rgba(255, 255, 255, 0.9); padding: 40px; border-radius: 10px; box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); }
+        h3 { font-size: 36px; color: #ff6f61; text-align: center; margin-bottom: 30px; }
+        label { display: block; margin-top: 20px; font-size: 18px; color: #333; }
+        input { width: 100%; padding: 15px; margin-top: 8px; border-radius: 5px; border: 1px solid #ccc; }
+        button { margin-top: 30px; width: 100%; background-color: #ff6f61; color: #fff; padding: 15px; border-radius: 5px; border: none; cursor: pointer; font-size: 18px; }
+        button:hover { background-color: #ff4d4d; }
+        .link { display: block; text-align: center; font-size: 16px; margin-top: 20px; color: #ff6f61; text-decoration: none; }
+        .link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h3>Restablecer Contraseña</h3>
+        <form method="POST" action="/Usuario/RestablecerContraseña">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="Ingrese su correo electrónico">
+            
+            <label for="nuevaContraseña">Nueva Contraseña</label>
+            <input type="password" id="nuevaContraseña" name="nuevaContraseña" required placeholder="Ingrese su nueva contraseña">
+            
+            <button type="submit">Restablecer Contraseña</button>
+            <a href="/Login" class="link">Regresar al inicio de sesión</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f5d0e1;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /* Contenedor principal */
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+        }
+        h3 {
+            font-size: 26px;
+            color: #ff6f61;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        .form-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+        .full-width {
+            width: 100%;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 12px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        button:hover {
+            background-color: #ff4d4d;
+        }
+        .link {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+            color: #ff6f61;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h3>Formulario de Registro</h3>
+        <form method="POST" action="/Usuario/RegistrarPendiente">
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="nom">Nombre</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-column">
+                    <label for="ape">Apellido</label>
+                    <input type="text" id="ape" name="ape" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" name="dni" required>
+                </div>
+                <div class="form-column">
+                    <label for="cel">Celular</label>
+                    <input type="text" id="cel" name="cel" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-column">
+                    <label for="dir">Dirección</label>
+                    <input type="text" id="dir" name="dir" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="pas">Contraseña</label>
+                    <input type="password" id="pas" name="pas" required>
+                </div>
+                <div class="form-column">
+                    <label for="use">Usuario</label>
+                    <input type="text" id="use" name="use" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column full-width">
+                    <label for="imagen">Imagen (opcional)</label>
+                    <input type="file" id="imagen" class="form-control" name="imagen" accept="image/*">
+                </div>
+            </div>
+            <button type="submit">Enviar Solicitud</button>
+            <a href="/Login" class="link">¿Ya tienes cuenta? Inicia sesión aquí</a>
+        </form>
+    </div>
+</body>
+</html>

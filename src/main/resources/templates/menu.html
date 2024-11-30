@@ -1,0 +1,127 @@
+<aside class="sidebar">
+  <div class="toggle">
+    <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+      <span></span>
+    </a>
+  </div>
+  <div class="side-inner">
+
+    <div class="profile">
+      <img th:src="@{'.././images/' + ${nombreImagen}}" alt="Image" class="img-fluid">
+      <h3><span th:text="${username}" class="name"></span></h3>
+      <span th:text="${userRole}" class="country"></span>
+    </div>
+
+
+    <div class="nav-menu">
+      <ul>
+        <li class="accordion">
+          <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+            aria-controls="collapseOne" class="collapsible">
+            <span class="icon-user mr-3"></span>Usuario
+          </a>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+            <div>
+              <ul>
+                <li><a th:href="@{/Usuario/ListaUsuarios}">Lista de Usuarios</a></li>
+                <li><a th:href="@{/Usuario/NuevoUsuario}">Agregar Usuarios</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="accordion">
+          <a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+            aria-controls="collapseTwo" class="collapsible">
+            <span class="icon-people mr-3"></span>Pacientes
+          </a>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+            <div>
+              <ul>
+                <li><a th:href="@{/Paciente/ListaPacientes}">Lista de Pacientes</a></li>
+                <li><a th:href="@{/Paciente/NuevoPaciente}">Agregar Pacientes</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="accordion">
+          <a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+            aria-controls="collapseThree" class="collapsible">
+            <span class="icon-user-md mr-3"></span>Profesionales
+          </a>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+            <div>
+              <ul>
+                <li><a th:href="@{/ProfesionalSalud/ListaProfesionales}">Lista de Profesionales</a></li>
+                <li><a th:href="@{/ProfesionalSalud/NuevoProfesional}">Agregar Profesionales</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="accordion">
+          <a href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+            aria-controls="collapseFour" class="collapsible">
+            <span class="icon-calendar mr-3"></span>Citas
+          </a>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
+            <div>
+              <ul>
+                <li><a th:href="@{/Cita/ListaCitas}">Lista de Citas</a></li>
+                <li><a th:href="@{/Cita/NuevaCita}">Agregar Citas</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="accordion">
+          <a href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+            aria-controls="collapseFive" class="collapsible">
+            <span class="icon-file-text mr-3"></span>Historias Clínicas
+          </a>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive">
+            <div>
+              <ul>
+                <li><a th:href="@{/HistoriaClinica/ListaHistoriasClinicas}">Lista de Historias Clínicas</a></li>
+                <li><a th:href="@{/HistoriaClinica/NuevaHistoriaClinica}">Agregar Historias Clínicas</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="accordion">
+          <a href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
+            aria-controls="collapseSix" class="collapsible">
+            <span class="icon-stethoscope mr-3"></span>Tratamientos
+          </a>
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix">
+            <div>
+              <ul>
+                <li><a th:href="@{/Tratamiento/ListaTratamientos}">Lista de Tratamientos</a></li>
+                <li><a th:href="@{/Tratamiento/NuevoTratamiento}">Agregar Tratamientos</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="accordion">
+          <a href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false"
+            aria-controls="collapseSeven" class="collapsible">
+            <span class="icon-credit-card mr-3"></span>Facturas
+          </a>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven">
+            <div>
+              <ul>
+                <li><a th:href="@{/Factura/ListaFacturas}">Lista de Facturas</a></li>
+                <li><a th:href="@{/Factura/NuevaFactura}">Agregar Facturas</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a th:href="@{/Login}">
+            <span class="icon-sign-out mr-3"></span>Cerrar sesión
+          </a>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+
+</aside>

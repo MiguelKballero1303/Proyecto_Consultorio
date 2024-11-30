@@ -1,0 +1,22 @@
+.barraCentro{
+    margin-left: 10%;
+}
+
+.barraPersonalizada {
+    height: 4px; /* 4px de grosor */
+      background-color: rgb(0, 0, 0); /* Color de fondo azul */
+      border: none; /* Para quitar el borde predeterminado */
+      opacity: 0.9;
+}
+table {
+  width: 100%;
+}
+
+table thead th {
+  position: sticky;
+  top: 0;
+}
+
+table tbody td {
+  word-break: break-all;
+}
